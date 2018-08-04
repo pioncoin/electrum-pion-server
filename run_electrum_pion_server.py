@@ -113,12 +113,12 @@ def create_config(filename=None):
 
     # set network parameters
     config.add_section('network')
-    config.set('network', 'type', 'dash_main')
+    config.set('network', 'type', 'pion_main')
 
     # try to find the config file in the default paths
     if not filename:
         for path in ('/etc/', ''):
-            filename = path + 'electrum-dash.conf'
+            filename = path + 'electrum-pion.conf'
             if os.path.isfile(filename):
                 break
 
@@ -236,7 +236,7 @@ def start_server(config):
     if ssl_certfile is '' or ssl_keyfile is '':
         stratum_tcp_ssl_port = None
 
-    print_log("Starting Electrum Dash server on", host)
+    print_log("Starting Electrum Pion server on", host)
 
     # Create hub
     dispatcher = Dispatcher(config)

@@ -1,10 +1,10 @@
 from setuptools import setup
 
 setup(
-    name="electrum-dash-server",
+    name="electrum-pion-server",
     version="1.0",
-    scripts=['run_electrum_dash_server','electrum-dash-server'],
-    install_requires=['plyvel','jsonrpclib', 'irc >= 11, <=14.0', 'x11_hash'],
+    scripts=['run_electrum_pion_server','electrum-pion-server'],
+    install_requires=['plyvel','jsonrpclib', 'irc >= 11, <=14.0', 'x16r_hash'],
     package_dir={
         'electrumserver':'src'
         },
@@ -21,10 +21,10 @@ setup(
         'electrumserver.ircthread',
         'electrumserver.stratum_tcp'
     ],
-    description="Dash Electrum Server",
-    author="Thomas Voegtlin ,ELM4ever, Propulsion, TheLazieR",
-    author_email="thomasv@electrum.org, thelazier@gmail.com",
+    description="Pion Electrum Server",
+    author="Thomas Voegtlin ,ELM4ever, Propulsion, TheLazieR, pioncore",
+    author_email="thomasv@electrum.org, thelazier@gmail.com, info@pioncoin.org",
     license="MIT Licence",
-    url="https://github.com/spesmilo/electrum-server/ , https://github.com/thelazier/electrum-dash-server/",
-    long_description="""Server for the Electrum Lightweight Dash Wallet"""
+    url="https://github.com/spesmilo/electrum-server/ , https://github.com/thelazier/electrum-pion-server/, https://github.com/dashpay/electrum-dash-server/",
+    long_description="""Server for the Electrum Lightweight Pion Wallet"""
 )
